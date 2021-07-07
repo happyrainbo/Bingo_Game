@@ -1,0 +1,82 @@
+# Project: 盧能賓果
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o print_rule.o print_player.o generate_number.o print_comupter.o computer_choose.o player_choose.o line_count.o print_line_count.o print_gameover.o gameover.o used_check.o print_check.o computer_complete_check.o computer_complete_update.o player_input.o input_check.o savegame.o loadgame.o
+LINKOBJ  = main.o print_rule.o print_player.o generate_number.o print_comupter.o computer_choose.o player_choose.o line_count.o print_line_count.o print_gameover.o gameover.o used_check.o print_check.o computer_complete_check.o computer_complete_update.o player_input.o input_check.o savegame.o loadgame.o
+LIBS     = -L"E:/應用程式/DevCppPortable/MinGW64/lib" -L"E:/應用程式/DevCppPortable/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"E:/應用程式/DevCppPortable/MinGW64/include" -I"E:/應用程式/DevCppPortable/MinGW64/x86_64-w64-mingw32/include" -I"E:/應用程式/DevCppPortable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/應用程式/DevCppPortable/MinGW64/include" -I"E:/應用程式/DevCppPortable/MinGW64/x86_64-w64-mingw32/include" -I"E:/應用程式/DevCppPortable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/應用程式/DevCppPortable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 盧能賓果.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+print_rule.o: print_rule.c
+	$(CC) -c print_rule.c -o print_rule.o $(CFLAGS)
+
+print_player.o: print_player.c
+	$(CC) -c print_player.c -o print_player.o $(CFLAGS)
+
+generate_number.o: generate_number.c
+	$(CC) -c generate_number.c -o generate_number.o $(CFLAGS)
+
+print_comupter.o: print_comupter.c
+	$(CC) -c print_comupter.c -o print_comupter.o $(CFLAGS)
+
+computer_choose.o: computer_choose.c
+	$(CC) -c computer_choose.c -o computer_choose.o $(CFLAGS)
+
+player_choose.o: player_choose.c
+	$(CC) -c player_choose.c -o player_choose.o $(CFLAGS)
+
+line_count.o: line_count.c
+	$(CC) -c line_count.c -o line_count.o $(CFLAGS)
+
+print_line_count.o: print_line_count.c
+	$(CC) -c print_line_count.c -o print_line_count.o $(CFLAGS)
+
+print_gameover.o: print_gameover.c
+	$(CC) -c print_gameover.c -o print_gameover.o $(CFLAGS)
+
+gameover.o: gameover.c
+	$(CC) -c gameover.c -o gameover.o $(CFLAGS)
+
+used_check.o: used_check.c
+	$(CC) -c used_check.c -o used_check.o $(CFLAGS)
+
+print_check.o: print_check.c
+	$(CC) -c print_check.c -o print_check.o $(CFLAGS)
+
+computer_complete_check.o: computer_complete_check.c
+	$(CC) -c computer_complete_check.c -o computer_complete_check.o $(CFLAGS)
+
+computer_complete_update.o: computer_complete_update.c
+	$(CC) -c computer_complete_update.c -o computer_complete_update.o $(CFLAGS)
+
+player_input.o: player_input.c
+	$(CC) -c player_input.c -o player_input.o $(CFLAGS)
+
+input_check.o: input_check.c
+	$(CC) -c input_check.c -o input_check.o $(CFLAGS)
+
+savegame.o: savegame.c
+	$(CC) -c savegame.c -o savegame.o $(CFLAGS)
+
+loadgame.o: loadgame.c
+	$(CC) -c loadgame.c -o loadgame.o $(CFLAGS)
